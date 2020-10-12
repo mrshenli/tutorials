@@ -112,8 +112,8 @@ DDP uses multi-process parallelism, and hence there is no GIL contention across
 model replicas. Moreover, the model is broadcast at DDP construction time instead
 of in every forward pass, which also helps to speed up training. DDP is shipped
 with several performance optimization technologies. For a more in-depth
-explanation, please refer to this
-`DDP paper <https://arxiv.org/abs/2006.15704>`__ (VLDB'20).
+explanation, please refer to this VLDB'20 paper
+`PyTorch Distributed: Experiences on Accelerating Data Parallel Training <http://www.vldb.org/pvldb/vol13/p3005-li.pdf>`__.
 
 
 DDP materials are listed below:
@@ -196,12 +196,14 @@ RPC Tutorials are listed below:
    decorator, which can help speed up inference and training. It uses similar
    RL and PS examples employed in the above tutorials 1 and 2.
 5. The `Combining Distributed DataParallel with Distributed RPC Framework <../advanced/rpc_ddp_tutorial.html>`__
-   tutorial demonstrates how to combine DDP with RPC to train a model using 
+   tutorial demonstrates how to combine DDP with RPC to train a model using
    distributed data parallelism combined with distributed model parallelism.
+6. The `Profiling PyTorch RPC-based Workloads <../recipes/distributed_rpc_profiling.html>`__
+   tutorial explains how to profile RPC using autograd profiler.
 
 
 PyTorch Distributed Developers
 ------------------------------
 
-If you'd like to contribute to PyTorch Distributed, please refer to our 
+If you'd like to contribute to PyTorch Distributed, please refer to our
 `Developer Guide <https://github.com/pytorch/pytorch/blob/master/torch/distributed/CONTRIBUTING.md>`_.
